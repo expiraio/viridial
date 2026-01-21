@@ -33,7 +33,7 @@ import {
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Checkbox } from '@/components/ui/checkbox'
 import {
   Table,
@@ -69,7 +69,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   enableRowSelection: false,
   enableExpansion: false,
-  defaultPageSize: 5,
+  defaultPageSize: 10,
   emptyMessage: 'No results.',
   loading: false,
   totalItems: 0,
@@ -290,7 +290,7 @@ const onLastPage = () => {
 
     <!-- ================= ACTIONS TEMPLATE ================= -->
     <DefineActionsTemplate
-      v-slot="{ row, onQuickView, onViewDetail, onActivate, onDeactivate }"
+      v-slot="{ onQuickView, onViewDetail, onActivate, onDeactivate }"
     >
       <div class="flex gap-1">
         <Button
@@ -429,17 +429,22 @@ const onLastPage = () => {
                     </TooltipTrigger>
 
                     <TooltipContent side="left">
-                      <ReuseActionsTemplate
-                        :row="row.original"
-                        :onQuickView="() =>
-                          emitEvent('quick-view-item', { item: row.original })"
-                        :onViewDetail="() =>
-                          emitEvent('view-detail-item', { item: row.original })"
-                        :onActivate="() =>
-                          emitEvent('activate-referential', { referential: row.original })"
-                        :onDeactivate="() =>
-                          emitEvent('deactivate-referential', { referential: row.original })"
-                      />
+                      <template v-if="slots.actions">
+                        <slot name="actions" :row="row.original" />
+                      </template>
+                      <template v-else>
+                        <ReuseActionsTemplate
+                          :row="row.original"
+                          :onQuickView="() =>
+                            emitEvent('quick-view-item', { item: row.original })"
+                          :onViewDetail="() =>
+                            emitEvent('view-detail-item', { item: row.original })"
+                          :onActivate="() =>
+                            emitEvent('activate-referential', { referential: row.original })"
+                          :onDeactivate="() =>
+                            emitEvent('deactivate-referential', { referential: row.original })"
+                        />
+                      </template>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>

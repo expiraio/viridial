@@ -10,7 +10,7 @@ import { logger } from '@/shared/utils/logger'
 
 export function guestGuard(
   to: RouteLocationNormalized,
-  from: RouteLocationNormalized,
+  _from: RouteLocationNormalized,
   next: NavigationGuardNext
 ) {
   const token = localStorage.getItem(STORAGE_KEYS.TOKEN)

@@ -15,7 +15,7 @@ import { CirclePlus, Eye, Trash2 } from 'lucide-vue-next'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { DropdownMenuItem } from '@/components/ui/dropdown-menu'
 import { useRouter } from 'vue-router'
-import { toast } from 'vue-sonner'
+// toast is not used directly here; use `useToast` or page-level modals instead
 
 const { t } = useI18n()
 const router = useRouter()

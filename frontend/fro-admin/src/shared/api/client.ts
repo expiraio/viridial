@@ -8,8 +8,6 @@ import { appConfig } from '@/core/config/app.config'
 import { STORAGE_KEYS, HTTP_STATUS } from '@/core/config/constants'
 import type { ApiResponse } from '@/shared/types'
 import { logger } from '@/shared/utils/logger'
-import { ErrorHandler } from '@/shared/utils/error-handler'
-import { useRouter } from 'vue-router'
 
 class ApiClient {
   private client: AxiosInstance

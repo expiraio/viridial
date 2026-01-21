@@ -3,13 +3,20 @@
  * Centralized logging with different log levels
  */
 
-export enum LogLevel {
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
-  NONE = 4,
-}
+export const LogLevelMap = {
+  DEBUG: 0,
+  INFO: 1,
+  WARN: 2,
+  ERROR: 3,
+  NONE: 4,
+} as const
+
+export type LogLevel = typeof LogLevelMap[keyof typeof LogLevelMap]
+
+const LogLevelName = ['DEBUG', 'INFO', 'WARN', 'ERROR', 'NONE'] as const
+
+// Runtime alias to use numeric constants like `LogLevel.DEBUG` in code
+export const LogLevel = LogLevelMap as { [K in keyof typeof LogLevelMap]: typeof LogLevelMap[K] }
 
 interface LogEntry {
   level: LogLevel
@@ -27,7 +34,7 @@ class Logger {
   constructor() {
     // Set log level from environment or default to INFO in production, DEBUG in development
     const envLevel = import.meta.env.VITE_LOG_LEVEL || (import.meta.env.DEV ? 'DEBUG' : 'INFO')
-    this.logLevel = LogLevel[envLevel as keyof typeof LogLevel] ?? LogLevel.INFO
+    this.logLevel = (LogLevelMap as any)[envLevel as keyof typeof LogLevelMap] ?? LogLevelMap.INFO
   }
 
   private shouldLog(level: LogLevel): boolean {
@@ -35,7 +42,7 @@ class Logger {
   }
 
   private formatMessage(level: LogLevel, message: string, data?: any, context?: string): string {
-    const levelName = LogLevel[level]
+    const levelName = LogLevelName[level] ?? 'UNKNOWN'
     const contextStr = context ? `[${context}]` : ''
     const dataStr = data ? ` ${JSON.stringify(data, null, 2)}` : ''
     return `${levelName} ${contextStr} ${message}${dataStr}`

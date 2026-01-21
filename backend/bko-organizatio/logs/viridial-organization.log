@@ -7626,3 +7626,776 @@ java.lang.NumberFormatException: For input string: ""
 2026-01-21 06:28:52.196 DEBUG 78979 --- [viridial-organization-pool:connection-closer] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Closing connection org.postgresql.jdbc.PgConnection@48f7400b: (connection evicted)
 2026-01-21 06:28:52.196 DEBUG 78979 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  shutdown stats (total=0/20, idle=0/5, active=0, waiting=0)
 2026-01-21 06:28:52.199  INFO 78979 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : viridial-organization-pool - Shutdown completed.
+2026-01-21 06:44:31.206  INFO 72221 --- [main] c.v.ViridialOrganizationApplication      : Starting ViridialOrganizationApplication using Java 21.0.9 with PID 72221 (/Users/mac/viridial.com/backend/bko-organizatio/target/classes started by mac in /Users/mac/viridial.com/backend/bko-organizatio)
+2026-01-21 06:44:31.207 DEBUG 72221 --- [main] c.v.ViridialOrganizationApplication      : Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-01-21 06:44:31.207  INFO 72221 --- [main] c.v.ViridialOrganizationApplication      : The following 1 profile is active: "dev"
+2026-01-21 06:44:32.046  INFO 72221 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-21 06:44:32.057 DEBUG 72221 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Scanning for JPA repositories in packages com.viridial.
+2026-01-21 06:44:32.070 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/common/repositories/TimezoneRepository.class]
+2026-01-21 06:44:32.071 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/countries/repositories/CityRepository.class]
+2026-01-21 06:44:32.072 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/countries/repositories/CountryRepository.class]
+2026-01-21 06:44:32.073 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/feature/repositories/FeatureRepository.class]
+2026-01-21 06:44:32.073 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/feature/repositories/FeatureRoleRepository.class]
+2026-01-21 06:44:32.073 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/feature/repositories/FeatureTypeRepository.class]
+2026-01-21 06:44:32.074 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/organization/repositories/TeamAddressRepository.class]
+2026-01-21 06:44:32.074 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/organization/repositories/TeamPhoneRepository.class]
+2026-01-21 06:44:32.074 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/organization/repositories/TeamRepository.class]
+2026-01-21 06:44:32.075 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/referentiel/repositories/ReferentialRepository.class]
+2026-01-21 06:44:32.076 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/roles/repositories/RoleRepository.class]
+2026-01-21 06:44:32.078 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/users/repositories/UserRepository.class]
+2026-01-21 06:44:32.079 DEBUG 72221 --- [main] o.s.d.r.c.RepositoryComponentProvider    : Identified candidate component class: file [/Users/mac/viridial.com/backend/bko-organizatio/target/classes/com/viridial/users/repositories/UserRoleRepository.class]
+2026-01-21 06:44:32.151  INFO 72221 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 13 JPA repository interfaces.
+2026-01-21 06:44:32.538  INFO 72221 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-01-21 06:44:32.555  INFO 72221 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-21 06:44:32.556  INFO 72221 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-21 06:44:32.608  INFO 72221 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-21 06:44:32.609  INFO 72221 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1370 ms
+2026-01-21 06:44:32.691 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : Class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2c854dc5
+2026-01-21 06:44:32.739 DEBUG 72221 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2026-01-21 06:44:32.754  INFO 72221 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-21 06:44:32.800  INFO 72221 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-21 06:44:32.826  INFO 72221 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-21 06:44:33.018  INFO 72221 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-21 06:44:33.046 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : viridial-organization-pool - configuration:
+2026-01-21 06:44:33.047 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2026-01-21 06:44:33.047 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................false
+2026-01-21 06:44:33.048 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2026-01-21 06:44:33.048 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2026-01-21 06:44:33.048 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2026-01-21 06:44:33.048 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2026-01-21 06:44:33.048 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : credentials.....................com.zaxxer.hikari.util.Credentials@401926df
+2026-01-21 06:44:33.048 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2026-01-21 06:44:33.048 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2026-01-21 06:44:33.048 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.postgresql.Driver"
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverride...............none
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................300000
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:postgresql://localhost:5432/viridialdb
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime...................120000
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........60000
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2026-01-21 06:44:33.049 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................20
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................5
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : poolName........................"viridial-organization-pool"
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................true
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : username........................"postgres"
+2026-01-21 06:44:33.050 DEBUG 72221 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2026-01-21 06:44:33.050  INFO 72221 --- [main] com.zaxxer.hikari.HikariDataSource       : viridial-organization-pool - Starting...
+2026-01-21 06:44:33.058 DEBUG 72221 --- [main] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Attempting to create/setup new connection (27678971-a2c8-4e07-8473-6a08b73573b1)
+2026-01-21 06:44:33.312 DEBUG 72221 --- [main] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Established new connection (27678971-a2c8-4e07-8473-6a08b73573b1)
+2026-01-21 06:44:33.313  INFO 72221 --- [main] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Added connection org.postgresql.jdbc.PgConnection@da5d5e1
+2026-01-21 06:44:33.366  INFO 72221 --- [main] com.zaxxer.hikari.HikariDataSource       : viridial-organization-pool - Start completed.
+2026-01-21 06:44:33.372 DEBUG 72221 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : Database ->
+	   name : PostgreSQL
+	version : 17.5
+	  major : 17
+	  minor : 5
+2026-01-21 06:44:33.372 DEBUG 72221 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : Driver ->
+	   name : PostgreSQL JDBC Driver
+	version : 42.7.8
+	  major : 42
+	  minor : 7
+2026-01-21 06:44:33.372 DEBUG 72221 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : JDBC version : 4.2
+2026-01-21 06:44:33.412  WARN 72221 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-21 06:44:33.414 DEBUG 72221 --- [main] o.h.e.j.env.spi.IdentifierHelperBuilder  : JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+2026-01-21 06:44:33.423 DEBUG 72221 --- [main] com.zaxxer.hikari.pool.ProxyConnection   : viridial-organization-pool - Executed rollback on connection org.postgresql.jdbc.PgConnection@da5d5e1 due to dirty commit state on close().
+2026-01-21 06:44:33.426  INFO 72221 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (viridial-organization-pool)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-21 06:44:33.470 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=1/20, idle=1/5, active=0, waiting=0)
+2026-01-21 06:44:33.470 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=1/20, idle=1/5, active=0, waiting=0)
+2026-01-21 06:44:33.471 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Attempting to create/setup new connection (305dd2d2-3306-4ebe-b26a-4974fda279d4)
+2026-01-21 06:44:33.492 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Established new connection (305dd2d2-3306-4ebe-b26a-4974fda279d4)
+2026-01-21 06:44:33.492 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Added connection org.postgresql.jdbc.PgConnection@94ca546
+2026-01-21 06:44:33.526 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After adding stats (total=2/20, idle=2/5, active=0, waiting=0)
+2026-01-21 06:44:33.526 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Attempting to create/setup new connection (43aea399-626b-4273-be6a-3b93d7dddced)
+2026-01-21 06:44:33.574 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Established new connection (43aea399-626b-4273-be6a-3b93d7dddced)
+2026-01-21 06:44:33.575 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Added connection org.postgresql.jdbc.PgConnection@78b4a1f
+2026-01-21 06:44:33.609 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After adding stats (total=3/20, idle=3/5, active=0, waiting=0)
+2026-01-21 06:44:33.609 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Attempting to create/setup new connection (89e09be8-2195-4fac-b94b-e07b5039cbd4)
+2026-01-21 06:44:33.646 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Established new connection (89e09be8-2195-4fac-b94b-e07b5039cbd4)
+2026-01-21 06:44:33.646 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Added connection org.postgresql.jdbc.PgConnection@3b4ce36
+2026-01-21 06:44:33.678 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After adding stats (total=4/20, idle=4/5, active=0, waiting=0)
+2026-01-21 06:44:33.678 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Attempting to create/setup new connection (d30015a0-1102-4fae-8911-69ba8fa64d72)
+2026-01-21 06:44:33.703 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.PoolBase          : viridial-organization-pool - Established new connection (d30015a0-1102-4fae-8911-69ba8fa64d72)
+2026-01-21 06:44:33.704 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Added connection org.postgresql.jdbc.PgConnection@46b64024
+2026-01-21 06:44:33.739 DEBUG 72221 --- [viridial-organization-pool:connection-adder] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After adding stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:44:34.226  INFO 72221 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-21 06:44:34.239  INFO 72221 --- [main] org.hibernate.orm.connections.access     : HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7d44e3c7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2026-01-21 06:44:35.641  INFO 72221 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-21 06:44:35.754 DEBUG 72221 --- [main] .c.JpaMetamodelMappingContextFactoryBean : Initializing JpaMetamodelMappingContext…
+2026-01-21 06:44:35.773 DEBUG 72221 --- [main] .c.JpaMetamodelMappingContextFactoryBean : Finished initializing JpaMetamodelMappingContext
+2026-01-21 06:44:35.855 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.common.repositories.TimezoneRepository…
+2026-01-21 06:44:35.927 DEBUG 72221 --- [main] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query 'TimezoneEntity.findByCode'
+2026-01-21 06:44:35.985 DEBUG 72221 --- [main] o.h.stat.internal.StatisticsInitiator    : Statistics initialized [enabled=false]
+2026-01-21 06:44:35.995 DEBUG 72221 --- [main] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query TimezoneEntity.findByCode
+2026-01-21 06:44:36.068 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.common.repositories.TimezoneRepository.
+2026-01-21 06:44:36.078 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.referentiel.repositories.ReferentialRepository…
+2026-01-21 06:44:36.080 DEBUG 72221 --- [main] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query 'ReferentialEntity.findByCodeAndDataType'
+2026-01-21 06:44:36.080 DEBUG 72221 --- [main] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query ReferentialEntity.findByCodeAndDataType
+2026-01-21 06:44:36.083 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.referentiel.repositories.ReferentialRepository.
+2026-01-21 06:44:36.103 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.countries.repositories.CountryRepository…
+2026-01-21 06:44:36.109 DEBUG 72221 --- [main] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query 'CountryEntity.findByIso2'
+2026-01-21 06:44:36.109 DEBUG 72221 --- [main] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query CountryEntity.findByIso2
+2026-01-21 06:44:36.117 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.countries.repositories.CountryRepository.
+2026-01-21 06:44:36.130 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.countries.repositories.CityRepository…
+2026-01-21 06:44:36.140 DEBUG 72221 --- [main] o.s.d.jpa.repository.query.NamedQuery    : Looking up named query 'CityEntity.findByNameAndCountryId'
+2026-01-21 06:44:36.141 DEBUG 72221 --- [main] o.s.d.jpa.repository.query.NamedQuery    : Did not find named query CityEntity.findByNameAndCountryId
+2026-01-21 06:44:36.146 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.countries.repositories.CityRepository.
+2026-01-21 06:44:36.177 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.organization.repositories.TeamRepository…
+2026-01-21 06:44:36.180 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.organization.repositories.TeamRepository.
+2026-01-21 06:44:36.182 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.organization.repositories.TeamAddressRepository…
+2026-01-21 06:44:36.185 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.organization.repositories.TeamAddressRepository.
+2026-01-21 06:44:36.188 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.organization.repositories.TeamPhoneRepository…
+2026-01-21 06:44:36.191 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.organization.repositories.TeamPhoneRepository.
+2026-01-21 06:44:36.285 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.roles.repositories.RoleRepository…
+2026-01-21 06:44:36.288 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.roles.repositories.RoleRepository.
+2026-01-21 06:44:36.303 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.users.repositories.UserRepository…
+2026-01-21 06:44:36.308 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.users.repositories.UserRepository.
+2026-01-21 06:44:36.346  WARN 72221 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-21 06:44:36.537 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.feature.repositories.FeatureRoleRepository…
+2026-01-21 06:44:36.546 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.feature.repositories.FeatureRoleRepository.
+2026-01-21 06:44:36.548 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.feature.repositories.FeatureRepository…
+2026-01-21 06:44:36.550 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.feature.repositories.FeatureRepository.
+2026-01-21 06:44:36.555 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.users.repositories.UserRoleRepository…
+2026-01-21 06:44:36.557 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.users.repositories.UserRoleRepository.
+2026-01-21 06:44:36.559 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Initializing repository instance for com.viridial.feature.repositories.FeatureTypeRepository…
+2026-01-21 06:44:36.562 DEBUG 72221 --- [main] o.s.d.r.c.s.RepositoryFactorySupport     : Finished creation of repository instance for com.viridial.feature.repositories.FeatureTypeRepository.
+2026-01-21 06:44:36.617  INFO 72221 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-01-21 06:44:36.624  INFO 72221 --- [main] c.v.ViridialOrganizationApplication      : Started ViridialOrganizationApplication in 5.753 seconds (process running for 5.963)
+2026-01-21 06:44:36.628 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.common.config.DataSeeder.run]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2026-01-21 06:44:36.629 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:36.631 DEBUG 72221 --- [main] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:44:36.631 DEBUG 72221 --- [main] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:44:36.632 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@62371858]
+2026-01-21 06:44:36.633  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Starting data seeding...
+2026-01-21 06:44:36.633  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Deleting all existing data...
+2026-01-21 06:44:36.635 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:36.635 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:36.745 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:36.745 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:36.830 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:36.830 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:36.913 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:36.913 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:36.930 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:36.930 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.063 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.063 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.086  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.087  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.087  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.088  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.088  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.088  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.088  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.088  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.089  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.089  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.089  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.089  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.089  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.090  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.090  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.090  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.090  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.090  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.090  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.091  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.091  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.091  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.091  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.092  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.092  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.093  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.093  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.093  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.094  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.094  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.094  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.094  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.094  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.095  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.095  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.095  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.096  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [parent] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.096  WARN 72221 --- [main] o.h.p.entity.AbstractEntityPersister     : HHH000502: The [type] property of the [com.viridial.referentiel.entities.ReferentialEntity] entity was modified, but it won't be updated because the property is immutable.
+2026-01-21 06:44:37.154 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.154 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.190  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : All existing data deleted
+2026-01-21 06:44:37.190  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeding timezones...
+2026-01-21 06:44:37.191 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.191 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.233  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeded 30 timezones
+2026-01-21 06:44:37.233  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeding referentials...
+2026-01-21 06:44:37.285 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.285 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.291 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.291 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.299 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.299 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.348 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.348 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.353 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.353 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.359 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.359 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.363 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.363 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.376 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.376 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.380 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.380 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.389  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeded 66 referentials
+2026-01-21 06:44:37.389  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeding countries...
+2026-01-21 06:44:37.464 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.464 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.513  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeded 27 countries
+2026-01-21 06:44:37.513  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeding cities...
+2026-01-21 06:44:37.583 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.583 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.622  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeded 26 cities
+2026-01-21 06:44:37.622  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeding organizations...
+2026-01-21 06:44:37.695 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.695 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.716  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeded 7 teams
+2026-01-21 06:44:37.716 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.716 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.724  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeded 5 addresses
+2026-01-21 06:44:37.724 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(147647618<open>)] for JPA transaction
+2026-01-21 06:44:37.724 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:44:37.737  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Seeded 6 phone numbers
+2026-01-21 06:44:37.737  INFO 72221 --- [main] com.viridial.common.config.DataSeeder    : Data seeding completed successfully!
+2026-01-21 06:44:37.737 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:44:37.738 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(147647618<open>)]
+2026-01-21 06:44:37.738 DEBUG 72221 --- [main] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:44:37.740 DEBUG 72221 --- [main] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(147647618<open>)] after transaction
+2026-01-21 06:44:37.741 DEBUG 72221 --- [main] o.h.e.jdbc.internal.JdbcCoordinatorImpl  : HHH000420: Closing un-released batch
+2026-01-21 06:44:46.119  INFO 72221 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-21 06:44:46.121  INFO 72221 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-21 06:44:46.150  INFO 72221 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2026-01-21 06:44:46.254 DEBUG 72221 --- [http-nio-8081-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:44:46.465 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(659029941<open>)] for JPA transaction
+2026-01-21 06:44:46.465 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:44:46.780 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:44:46.781 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:44:46.782 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@74176da9]
+2026-01-21 06:44:47.144 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:44:47.144 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(659029941<open>)]
+2026-01-21 06:44:47.145 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:44:47.146 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:44:47.200 DEBUG 72221 --- [http-nio-8081-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:45:03.485 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:45:03.500 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:45:03.501 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:45:33.504 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:45:33.514 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:45:33.514 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:45:51.564 DEBUG 72221 --- [http-nio-8081-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:45:51.838 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(947458475<open>)] for JPA transaction
+2026-01-21 06:45:51.839 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:45:52.334 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:45:52.334 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:45:52.335 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@36bef8d4]
+2026-01-21 06:45:52.538 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:45:52.538 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(947458475<open>)]
+2026-01-21 06:45:52.538 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:45:52.572 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:45:52.605 DEBUG 72221 --- [http-nio-8081-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:46:02.481 DEBUG 72221 --- [http-nio-8081-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:46:02.505 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(208815435<open>)] for JPA transaction
+2026-01-21 06:46:02.506 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:46:02.586 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:46:02.587 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:46:02.589 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2b5aab5]
+2026-01-21 06:46:02.670 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:46:02.670 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(208815435<open>)]
+2026-01-21 06:46:02.670 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:46:02.671 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:46:02.676 DEBUG 72221 --- [http-nio-8081-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:46:03.515 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:46:03.516 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:46:03.516 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:46:14.876 DEBUG 72221 --- [http-nio-8081-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:46:14.888 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1515248791<open>)] for JPA transaction
+2026-01-21 06:46:14.888 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:46:14.891 DEBUG 72221 --- [http-nio-8081-exec-4] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:46:14.891 DEBUG 72221 --- [http-nio-8081-exec-4] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:46:14.891 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@549729ad]
+2026-01-21 06:46:14.942 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:46:14.943 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1515248791<open>)]
+2026-01-21 06:46:14.943 DEBUG 72221 --- [http-nio-8081-exec-4] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:46:14.944 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:46:14.957 DEBUG 72221 --- [http-nio-8081-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:46:18.502 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 06:46:21.366 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 06:46:27.868 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 06:46:32.338 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 06:46:32.778 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 06:46:33.520 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:46:33.521 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:46:33.521 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:47:03.530 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:47:03.626 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:47:03.639 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:47:33.648 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:47:33.662 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:47:33.662 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:48:03.309 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 06:48:03.665 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:48:03.666 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:48:03.666 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:48:09.060 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 06:48:22.192 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 06:48:31.195 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 06:48:32.285 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 06:48:33.670 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:48:33.673 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:48:33.673 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:48:36.745 DEBUG 72221 --- [http-nio-8081-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:48:36.933 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1920026393<open>)] for JPA transaction
+2026-01-21 06:48:36.934 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:48:37.190 DEBUG 72221 --- [http-nio-8081-exec-5] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:48:37.191 DEBUG 72221 --- [http-nio-8081-exec-5] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:48:37.191 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7cb6a727]
+2026-01-21 06:48:38.772 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:48:38.830 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1920026393<open>)]
+2026-01-21 06:48:38.830 DEBUG 72221 --- [http-nio-8081-exec-5] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:48:38.848 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:48:38.916 DEBUG 72221 --- [http-nio-8081-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:48:44.636 DEBUG 72221 --- [http-nio-8081-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:48:44.704 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1122537194<open>)] for JPA transaction
+2026-01-21 06:48:44.705 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:48:44.984 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:48:44.986 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:48:44.987 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4c2f68c7]
+2026-01-21 06:48:45.914 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:48:45.914 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1122537194<open>)]
+2026-01-21 06:48:45.914 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:48:45.966 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:48:45.989 DEBUG 72221 --- [http-nio-8081-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:03.681 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:49:03.688 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:49:03.689 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:49:19.514 DEBUG 72221 --- [http-nio-8081-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:19.607 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1275263932<open>)] for JPA transaction
+2026-01-21 06:49:19.617 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:49:19.896 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:49:19.896 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:49:19.897 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@42c51c4c]
+2026-01-21 06:49:21.367 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:49:21.367 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1275263932<open>)]
+2026-01-21 06:49:21.367 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:49:21.399 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:49:21.445 DEBUG 72221 --- [http-nio-8081-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:26.169 DEBUG 72221 --- [http-nio-8081-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:26.189 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(324349050<open>)] for JPA transaction
+2026-01-21 06:49:26.191 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:49:26.222 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:49:26.222 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:49:26.222 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@1d92d060]
+2026-01-21 06:49:26.465 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:49:26.465 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(324349050<open>)]
+2026-01-21 06:49:26.466 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:49:26.490 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:49:26.521 DEBUG 72221 --- [http-nio-8081-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:33.691 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:49:33.695 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:49:33.695 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:49:48.109 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 06:49:48.374 DEBUG 72221 --- [http-nio-8081-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:48.478 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(133919263<open>)] for JPA transaction
+2026-01-21 06:49:48.479 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:49:48.494 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:49:48.494 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:49:48.494 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@93c9c90]
+2026-01-21 06:49:48.605 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:49:48.605 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(133919263<open>)]
+2026-01-21 06:49:48.605 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:49:48.614 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:49:48.657 DEBUG 72221 --- [http-nio-8081-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:54.242 DEBUG 72221 --- [http-nio-8081-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:54.277 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(883999869<open>)] for JPA transaction
+2026-01-21 06:49:54.278 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:49:54.328 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:49:54.338 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:49:54.339 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3a772c9b]
+2026-01-21 06:49:54.644 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:49:54.645 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(883999869<open>)]
+2026-01-21 06:49:54.645 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:49:54.646 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:49:54.651 DEBUG 72221 --- [http-nio-8081-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:49:56.770 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 06:50:01.523 DEBUG 72221 --- [http-nio-8081-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:50:01.591 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(183020821<open>)] for JPA transaction
+2026-01-21 06:50:01.592 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:50:01.709 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:50:01.709 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:50:01.709 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@371fb24b]
+2026-01-21 06:50:01.805 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:50:01.805 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(183020821<open>)]
+2026-01-21 06:50:01.805 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:50:01.805 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:50:01.819 DEBUG 72221 --- [http-nio-8081-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:50:03.700 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:50:03.706 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:50:03.706 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:50:09.010 DEBUG 72221 --- [http-nio-8081-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:50:09.035 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(964207867<open>)] for JPA transaction
+2026-01-21 06:50:09.035 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:50:09.037 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:50:09.037 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:50:09.037 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@74be3490]
+2026-01-21 06:50:09.377 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:50:09.377 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(964207867<open>)]
+2026-01-21 06:50:09.377 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:50:09.378 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:50:09.385 DEBUG 72221 --- [http-nio-8081-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:50:16.488 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 06:50:30.035 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 06:50:31.941 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 06:50:33.718 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:50:33.811 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:50:33.812 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:51:03.815 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:51:03.825 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:51:03.825 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:51:22.006 DEBUG 72221 --- [http-nio-8081-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:51:22.039 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(227153517<open>)] for JPA transaction
+2026-01-21 06:51:22.040 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:51:22.118 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:51:22.119 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:51:22.119 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@1a93109b]
+2026-01-21 06:51:22.181 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:51:22.181 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(227153517<open>)]
+2026-01-21 06:51:22.181 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:51:22.182 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:51:22.203 DEBUG 72221 --- [http-nio-8081-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:51:32.917 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 06:51:33.827 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:51:33.831 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:51:33.831 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:51:44.464 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 06:52:03.845 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:52:03.848 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:52:03.848 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:52:10.802 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 06:52:28.873 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 06:52:31.451 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 06:52:33.854 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:52:33.874 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:52:33.875 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:53:03.880 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:53:03.887 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:53:03.888 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:53:17.732 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 06:53:32.269 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 06:53:33.892 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:53:33.894 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:53:33.895 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:53:43.159 DEBUG 72221 --- [http-nio-8081-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:53:43.225 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(965730927<open>)] for JPA transaction
+2026-01-21 06:53:43.227 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:53:43.275 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:53:43.276 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:53:43.277 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@22e42db]
+2026-01-21 06:53:43.369 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:53:43.369 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(965730927<open>)]
+2026-01-21 06:53:43.369 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:53:43.370 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:53:43.382 DEBUG 72221 --- [http-nio-8081-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:54:03.903 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:54:03.908 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:54:03.908 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:54:05.094 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 06:54:10.737 DEBUG 72221 --- [http-nio-8081-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:54:10.763 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(2008526456<open>)] for JPA transaction
+2026-01-21 06:54:10.769 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:54:10.805 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:54:10.809 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:54:10.809 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@716d9587]
+2026-01-21 06:54:11.352 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:54:11.352 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(2008526456<open>)]
+2026-01-21 06:54:11.353 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:54:11.356 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:54:11.400 DEBUG 72221 --- [http-nio-8081-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:54:22.549 DEBUG 72221 --- [http-nio-8081-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:54:22.577 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(989946886<open>)] for JPA transaction
+2026-01-21 06:54:22.577 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:54:22.601 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:54:22.602 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:54:22.602 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2071d715]
+2026-01-21 06:54:22.812 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:54:22.813 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(989946886<open>)]
+2026-01-21 06:54:22.813 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:54:22.815 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:54:22.839 DEBUG 72221 --- [http-nio-8081-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:54:27.708 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 06:54:30.944 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 06:54:33.911 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:54:33.914 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:54:33.914 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:55:02.526 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 06:55:03.921 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:55:03.922 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:55:03.922 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:55:20.032 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 06:55:33.924 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:55:33.929 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:55:33.929 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:55:59.425 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 06:56:03.935 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:56:03.936 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:56:03.937 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:56:09.911 DEBUG 72221 --- [http-nio-8081-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:56:10.076 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(692837568<open>)] for JPA transaction
+2026-01-21 06:56:10.078 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:56:10.136 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:56:10.137 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:56:10.137 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@349238c0]
+2026-01-21 06:56:10.270 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:56:10.271 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(692837568<open>)]
+2026-01-21 06:56:10.271 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:56:10.272 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:56:10.286 DEBUG 72221 --- [http-nio-8081-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:56:15.411 DEBUG 72221 --- [http-nio-8081-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:56:15.539 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1869068274<open>)] for JPA transaction
+2026-01-21 06:56:15.540 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialUpdateServiceImpl.bulkUpdateActive]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2026-01-21 06:56:15.540 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:56:15.540 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:56:15.540 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6c669033]
+2026-01-21 06:56:15.574 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1869068274<open>)] for JPA transaction
+2026-01-21 06:56:15.574 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:56:15.688 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1869068274<open>)] for JPA transaction
+2026-01-21 06:56:15.688 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 06:56:15.706 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:56:15.707 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1869068274<open>)]
+2026-01-21 06:56:15.707 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:56:15.730 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:56:15.738 DEBUG 72221 --- [http-nio-8081-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:56:15.746 DEBUG 72221 --- [http-nio-8081-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:56:15.748 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(463819649<open>)] for JPA transaction
+2026-01-21 06:56:15.748 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:56:15.748 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:56:15.748 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:56:15.749 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3a3e1f3]
+2026-01-21 06:56:15.757 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:56:15.757 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(463819649<open>)]
+2026-01-21 06:56:15.757 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:56:15.757 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:56:15.759 DEBUG 72221 --- [http-nio-8081-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:56:26.742 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 06:56:29.685 DEBUG 72221 --- [http-nio-8081-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:56:29.711 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(952030282<open>)] for JPA transaction
+2026-01-21 06:56:29.712 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:56:29.716 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:56:29.717 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:56:29.717 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@69a42d12]
+2026-01-21 06:56:29.941 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:56:29.942 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(952030282<open>)]
+2026-01-21 06:56:29.942 DEBUG 72221 --- [http-nio-8081-exec-2] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:56:29.943 DEBUG 72221 --- [http-nio-8081-exec-2] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:56:29.948 DEBUG 72221 --- [http-nio-8081-exec-2] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:56:30.412 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 06:56:33.940 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:56:33.941 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:56:33.941 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:56:47.324 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 06:57:03.949 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:57:03.956 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:57:03.957 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:57:07.739 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 06:57:28.599 DEBUG 72221 --- [http-nio-8081-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:57:28.995 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1737845867<open>)] for JPA transaction
+2026-01-21 06:57:28.996 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:57:29.057 DEBUG 72221 --- [http-nio-8081-exec-4] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:57:29.058 DEBUG 72221 --- [http-nio-8081-exec-4] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:57:29.058 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@6a91bdf5]
+2026-01-21 06:57:29.171 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:57:29.172 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1737845867<open>)]
+2026-01-21 06:57:29.172 DEBUG 72221 --- [http-nio-8081-exec-4] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:57:29.172 DEBUG 72221 --- [http-nio-8081-exec-4] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:57:29.182 DEBUG 72221 --- [http-nio-8081-exec-4] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:57:33.969 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:57:33.974 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:57:33.974 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:57:53.752 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 06:58:03.981 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:58:03.983 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:58:03.983 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:58:08.199 DEBUG 72221 --- [http-nio-8081-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:58:08.230 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(393412497<open>)] for JPA transaction
+2026-01-21 06:58:08.230 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:58:08.374 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:58:08.375 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:58:08.375 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@62909723]
+2026-01-21 06:58:08.603 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:58:08.603 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(393412497<open>)]
+2026-01-21 06:58:08.603 DEBUG 72221 --- [http-nio-8081-exec-3] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:58:08.604 DEBUG 72221 --- [http-nio-8081-exec-3] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:58:08.614 DEBUG 72221 --- [http-nio-8081-exec-3] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:58:12.997 DEBUG 72221 --- [http-nio-8081-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:58:13.042 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(967910645<open>)] for JPA transaction
+2026-01-21 06:58:13.043 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 06:58:13.103 DEBUG 72221 --- [http-nio-8081-exec-5] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 06:58:13.103 DEBUG 72221 --- [http-nio-8081-exec-5] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 06:58:13.104 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2a4063bd]
+2026-01-21 06:58:13.404 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 06:58:13.404 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(967910645<open>)]
+2026-01-21 06:58:13.404 DEBUG 72221 --- [http-nio-8081-exec-5] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 06:58:13.405 DEBUG 72221 --- [http-nio-8081-exec-5] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 06:58:13.420 DEBUG 72221 --- [http-nio-8081-exec-5] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 06:58:25.625 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 06:58:29.907 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 06:58:32.183 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 06:58:33.986 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:58:33.992 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:58:33.992 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:58:55.466 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 06:59:04.014 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:59:04.018 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:59:04.018 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:59:34.021 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:59:34.022 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 06:59:34.023 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 06:59:48.047 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 07:00:04.027 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:00:04.029 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:00:04.030 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:00:16.994 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 07:00:24.472 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 07:00:29.382 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 07:00:34.031 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:00:34.033 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:00:34.033 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:00:43.159 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 07:01:04.038 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:01:04.040 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:01:04.040 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:01:34.046 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:01:34.051 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:01:34.051 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:01:42.340 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 07:02:01.787 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 07:02:04.057 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:02:04.058 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:02:04.058 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:02:23.312 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 07:02:28.850 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 07:02:30.852 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 07:02:34.074 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:02:34.084 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:02:34.084 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:03:01.600 DEBUG 72221 --- [http-nio-8081-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:01.742 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(2098677506<open>)] for JPA transaction
+2026-01-21 07:03:01.744 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 07:03:01.754 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 07:03:01.754 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 07:03:01.755 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3604fe8c]
+2026-01-21 07:03:01.930 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 07:03:01.930 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(2098677506<open>)]
+2026-01-21 07:03:01.930 DEBUG 72221 --- [http-nio-8081-exec-6] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 07:03:01.931 DEBUG 72221 --- [http-nio-8081-exec-6] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 07:03:01.952 DEBUG 72221 --- [http-nio-8081-exec-6] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:04.090 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:03:04.092 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:03:04.092 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:03:07.892 DEBUG 72221 --- [http-nio-8081-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:08.005 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1333199812<open>)] for JPA transaction
+2026-01-21 07:03:08.011 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialUpdateServiceImpl.bulkUpdateActive]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2026-01-21 07:03:08.016 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 07:03:08.017 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 07:03:08.020 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@51aefc4f]
+2026-01-21 07:03:08.031 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1333199812<open>)] for JPA transaction
+2026-01-21 07:03:08.031 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 07:03:08.075 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1333199812<open>)] for JPA transaction
+2026-01-21 07:03:08.075 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 07:03:08.080 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 07:03:08.080 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1333199812<open>)]
+2026-01-21 07:03:08.080 DEBUG 72221 --- [http-nio-8081-exec-7] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 07:03:08.081 DEBUG 72221 --- [http-nio-8081-exec-7] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 07:03:08.085 DEBUG 72221 --- [http-nio-8081-exec-7] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:08.112 DEBUG 72221 --- [http-nio-8081-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:08.114 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1516824637<open>)] for JPA transaction
+2026-01-21 07:03:08.114 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 07:03:08.114 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 07:03:08.114 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 07:03:08.114 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7a2f1081]
+2026-01-21 07:03:08.131 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 07:03:08.131 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1516824637<open>)]
+2026-01-21 07:03:08.131 DEBUG 72221 --- [http-nio-8081-exec-8] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 07:03:08.132 DEBUG 72221 --- [http-nio-8081-exec-8] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 07:03:08.135 DEBUG 72221 --- [http-nio-8081-exec-8] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:13.422 DEBUG 72221 --- [http-nio-8081-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:13.444 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(212335223<open>)] for JPA transaction
+2026-01-21 07:03:13.444 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialUpdateServiceImpl.bulkUpdateActive]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2026-01-21 07:03:13.445 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 07:03:13.446 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 07:03:13.446 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@37365afe]
+2026-01-21 07:03:13.447 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(212335223<open>)] for JPA transaction
+2026-01-21 07:03:13.447 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 07:03:13.513 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(212335223<open>)] for JPA transaction
+2026-01-21 07:03:13.513 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2026-01-21 07:03:13.532 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 07:03:13.532 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(212335223<open>)]
+2026-01-21 07:03:13.533 DEBUG 72221 --- [http-nio-8081-exec-9] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 07:03:13.552 DEBUG 72221 --- [http-nio-8081-exec-9] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 07:03:13.555 DEBUG 72221 --- [http-nio-8081-exec-9] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:13.568 DEBUG 72221 --- [http-nio-8081-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:13.570 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(488858872<open>)] for JPA transaction
+2026-01-21 07:03:13.570 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 07:03:13.571 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 07:03:13.571 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 07:03:13.571 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3ee97128]
+2026-01-21 07:03:13.580 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 07:03:13.580 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(488858872<open>)]
+2026-01-21 07:03:13.580 DEBUG 72221 --- [http-nio-8081-exec-10] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 07:03:13.581 DEBUG 72221 --- [http-nio-8081-exec-10] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 07:03:13.586 DEBUG 72221 --- [http-nio-8081-exec-10] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:27.364 DEBUG 72221 --- [http-nio-8081-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Opening JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:27.386 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(23432383<open>)] for JPA transaction
+2026-01-21 07:03:27.386 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [com.viridial.referentiel.services.ReferentialSearchServiceImpl.search]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2026-01-21 07:03:27.388 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2026-01-21 07:03:27.388 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : begin
+2026-01-21 07:03:27.389 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@735412a0]
+2026-01-21 07:03:27.604 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2026-01-21 07:03:27.604 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(23432383<open>)]
+2026-01-21 07:03:27.604 DEBUG 72221 --- [http-nio-8081-exec-1] o.h.e.t.internal.TransactionImpl         : committing
+2026-01-21 07:03:27.615 DEBUG 72221 --- [http-nio-8081-exec-1] o.s.orm.jpa.JpaTransactionManager        : Not closing pre-bound JPA EntityManager after transaction
+2026-01-21 07:03:27.621 DEBUG 72221 --- [http-nio-8081-exec-1] o.j.s.OpenEntityManagerInViewInterceptor : Closing JPA EntityManager in OpenEntityManagerInViewInterceptor
+2026-01-21 07:03:34.116 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:03:34.118 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:03:34.118 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:03:36.633 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@78b4a1f is alive
+2026-01-21 07:03:46.581 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@46b64024 is alive
+2026-01-21 07:04:04.123 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:04:04.126 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:04:04.126 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:04:18.540 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@3b4ce36 is alive
+2026-01-21 07:04:22.151 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@94ca546 is alive
+2026-01-21 07:04:28.320 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - keepalive: connection org.postgresql.jdbc.PgConnection@da5d5e1 is alive
+2026-01-21 07:04:34.129 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:04:34.131 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:04:34.131 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-01-21 07:05:04.139 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Before cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:05:04.141 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - After  cleanup stats (total=5/20, idle=5/5, active=0, waiting=0)
+2026-01-21 07:05:04.141 DEBUG 72221 --- [viridial-organization-pool:housekeeper] com.zaxxer.hikari.pool.HikariPool        : viridial-organization-pool - Fill pool skipped, pool has sufficient level or currently being filled.

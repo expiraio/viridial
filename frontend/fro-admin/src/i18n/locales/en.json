@@ -138,7 +138,8 @@
       "externalCode": "External Code",
       "displayOrder": "Order",
       "locale": "Locale",
-      "active": "Active"
+      "active": "Active",
+      "notFound": "Resource not found"
     },
     "dataTypes": {
       "language": "Language",

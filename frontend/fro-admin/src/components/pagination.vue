@@ -45,8 +45,10 @@ const pageInfo = computed(() => {
   return { start, end, total }
 })
 
-const handlePageSizeChange = (value: string) => {
-  emit('update:pageSize', Number.parseInt(value))
+const handlePageSizeChange = (value: any) => {
+  if (value === null || value === undefined) return
+  const str = String(value)
+  emit('update:pageSize', Number.parseInt(str))
   emit('update:pageIndex', 0) // Reset to first page when page size changes
 }
 

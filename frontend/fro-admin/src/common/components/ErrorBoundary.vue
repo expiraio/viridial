@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onErrorCaptured, h } from 'vue'
+import { ref, onErrorCaptured } from 'vue'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { logger } from '@/shared/utils/logger'
@@ -8,7 +8,7 @@ import { ErrorHandler } from '@/shared/utils/error-handler'
 const error = ref<Error | null>(null)
 const errorInfo = ref<any>(null)
 
-onErrorCaptured((err: Error, instance, info) => {
+onErrorCaptured((err: Error, _instance, info) => {
   error.value = err
   errorInfo.value = info
 
@@ -25,6 +25,10 @@ onErrorCaptured((err: Error, instance, info) => {
 const resetError = () => {
   error.value = null
   errorInfo.value = null
+}
+
+const refreshPage = () => {
+  if (typeof window !== 'undefined') window.location.reload()
 }
 </script>
 
@@ -53,7 +57,7 @@ const resetError = () => {
 
         <div class="flex gap-2">
           <Button @click="resetError">Try Again</Button>
-          <Button variant="outline" @click="window.location.reload()">
+          <Button variant="outline" @click="refreshPage">
             Refresh Page
           </Button>
         </div>

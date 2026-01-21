@@ -9,6 +9,6 @@ export interface Payment {
   naaa: number
 }
 
-export const usePaymentColumns = (t: Composer['t']): ColumnDef<Payment>[] => {
+export const usePaymentColumns = (_t: Composer['t']): ColumnDef<Payment>[] => {
   return []
 }

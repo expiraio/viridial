@@ -4,7 +4,6 @@
  */
 
 import type { PaymentColumn } from '../types'
-import { useI18n } from '@/shared/composables/useI18n'
 
 export const usePaymentColumns = (t: (key: string) => string): PaymentColumn[] => {
   return [

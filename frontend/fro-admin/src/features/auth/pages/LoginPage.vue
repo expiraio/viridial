@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuth } from '../composables/useAuth'
-import { useI18n } from '@/shared/composables/useI18n'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -12,7 +11,6 @@ import type { LoginCredentials } from '../types'
 
 const router = useRouter()
 const { login, isLoading } = useAuth()
-const { t } = useI18n()
 
 const email = ref('')
 const password = ref('')

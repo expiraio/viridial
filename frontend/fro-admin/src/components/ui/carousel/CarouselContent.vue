@@ -10,6 +10,8 @@ defineOptions({
 const props = defineProps<WithClassAsProps>()
 
 const { carouselRef, orientation } = useCarousel()
+// Mark carouselRef as used for TypeScript template-checker
+void carouselRef
 </script>
 
 <template>
