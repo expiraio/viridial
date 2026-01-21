@@ -1,0 +1,447 @@
+{
+	"info": {
+		"name": "Referential Resource - Search API",
+		"description": "Postman collection for ReferentialResource search endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "viridial-organization"
+	},
+	"item": [
+		{
+			"name": "Search - Simple Pagination",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"page\": 0,\n  \"size\": 20,\n  \"sortBy\": \"displayOrder\",\n  \"sortDirection\": \"ASC\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Simple search with pagination and sorting"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - By Code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"code\": \"LANG_EN\",\n  \"page\": 0,\n  \"size\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search referentials by code"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - By Data Type",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dataType\": \"LANGUAGE\",\n  \"page\": 0,\n  \"size\": 20,\n  \"sortBy\": \"displayOrder\",\n  \"sortDirection\": \"ASC\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search referentials by data type (e.g., LANGUAGE, REGION, TEAM_TYPE)"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - By Label (Contains)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"label\": \"English\",\n  \"page\": 0,\n  \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search referentials by label (case-insensitive contains)"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - Active Only",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"active\": true,\n  \"page\": 0,\n  \"size\": 20,\n  \"sortBy\": \"displayOrder\",\n  \"sortDirection\": \"ASC\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search only active referentials"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - By Type ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"typeId\": 1,\n  \"page\": 0,\n  \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search referentials by type ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - By Locale",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"locale\": \"en\",\n  \"page\": 0,\n  \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search referentials by locale"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - Advanced Filters",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"filters\": [\n    {\n      \"field\": \"active\",\n      \"operator\": \"EQUALS\",\n      \"value\": true\n    },\n    {\n      \"field\": \"displayOrder\",\n      \"operator\": \"GREATER_THAN_OR_EQUAL\",\n      \"value\": 1\n    }\n  ],\n  \"logicalOperator\": \"AND\",\n  \"page\": 0,\n  \"size\": 20,\n  \"sorts\": [\n    {\n      \"field\": \"displayOrder\",\n      \"direction\": \"ASC\"\n    },\n    {\n      \"field\": \"label\",\n      \"direction\": \"ASC\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Advanced search with multiple filters and multi-column sorting"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - By IDs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ids\": [1, 2, 3, 4, 5],\n  \"page\": 0,\n  \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search referentials by multiple IDs"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - Range Filter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ranges\": {\n    \"displayOrder\": {\n      \"min\": 1,\n      \"max\": 10\n    }\n  },\n  \"page\": 0,\n  \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search referentials with range filter on displayOrder"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - Complex Query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dataType\": \"LANGUAGE\",\n  \"active\": true,\n  \"locale\": \"en\",\n  \"filters\": [\n    {\n      \"field\": \"code\",\n      \"operator\": \"STARTS_WITH\",\n      \"value\": \"LANG_\"\n    }\n  ],\n  \"logicalOperator\": \"AND\",\n  \"page\": 0,\n  \"size\": 10,\n  \"sorts\": [\n    {\n      \"field\": \"displayOrder\",\n      \"direction\": \"ASC\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Complex search combining multiple criteria"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - Include Deleted",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"includeDeleted\": true,\n  \"page\": 0,\n  \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Search including soft-deleted referentials"
+			},
+			"response": []
+		},
+		{
+			"name": "Search - Filter Operators Examples",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"filters\": [\n    {\n      \"field\": \"code\",\n      \"operator\": \"CONTAINS\",\n      \"value\": \"LANG\"\n    },\n    {\n      \"field\": \"label\",\n      \"operator\": \"STARTS_WITH\",\n      \"value\": \"Eng\"\n    },\n    {\n      \"field\": \"displayOrder\",\n      \"operator\": \"IN\",\n      \"value\": [1, 2, 3, 4, 5]\n    },\n    {\n      \"field\": \"description\",\n      \"operator\": \"IS_NOT_NULL\",\n      \"value\": null\n    }\n  ],\n  \"logicalOperator\": \"AND\",\n  \"page\": 0,\n  \"size\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/referentiels/search",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"referentiels",
+						"search"
+					]
+				},
+				"description": "Examples of different filter operators: CONTAINS, STARTS_WITH, IN, IS_NOT_NULL"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8081",
+			"type": "string"
+		}
+	]
+}
+

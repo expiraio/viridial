@@ -1,0 +1,114 @@
+{
+  "common": {
+    "apply": "Apply",
+    "reset": "Reset",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter",
+    "filters": "Filters",
+    "moreFilters": "More filters",
+    "actions": "Actions",
+    "loading": "Loading...",
+    "noResults": "No results.",
+    "results": "results",
+    "of": "of"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "viridial": "Viridial"
+  },
+  "filter": {
+    "status": "Status",
+    "email": "Email",
+    "amount": "Amount",
+    "allStatuses": "All statuses",
+    "filterByEmail": "Filter by email...",
+    "filterByAmount": "Filter by amount...",
+    "advancedFilters": "Advanced Filters",
+    "advancedFiltersDescription": "Add additional filters to refine your search results",
+    "field": "Field",
+    "value": "Value",
+    "addFilter": "Add Filter",
+    "selectStatus": "Select status"
+  },
+  "status": {
+    "pending": "Pending",
+    "processing": "Processing",
+    "success": "Success",
+    "failed": "Failed"
+  },
+  "table": {
+    "rowsPerPage": "Rows per page:",
+    "page": "Page",
+    "previous": "Previous",
+    "next": "Next",
+    "firstPage": "Go to first page",
+    "lastPage": "Go to last page",
+    "previousPage": "Go to previous page",
+    "nextPage": "Go to next page",
+    "columns": "Columns",
+    "selectAll": "Select all",
+    "selectRow": "Select row"
+  },
+  "list": {
+    "activate": "Activate",
+    "activateBulk": "Activate {count} item(s)",
+    "activateNoSelection": "Activate (no selection)",
+    "deleteBulk": "Delete {count} item(s)",
+    "deleteNoSelection": "Delete (no selection)",
+    "viewPayment": "View payment",
+    "deletePayment": "Delete payment"
+  },
+  "designSystem": {
+    "title": "Design System",
+    "subtitle": "Enterprise UI components built with shadcn-vue",
+    "newUser": "New user"
+  },
+  "stats": {
+    "users": "Users",
+    "active": "Active",
+    "inactive": "Inactive",
+    "pending": "Pending"
+  },
+  "payment": {
+    "id": "ID",
+    "amount": "Amount",
+    "status": "Status",
+    "date": "Date",
+    "copyId": "Copy payment ID",
+    "viewCustomer": "View customer",
+    "viewDetails": "View payment details"
+  },
+  "errors": {
+    "unauthorized": "Unauthorized access",
+    "forbidden": "Access forbidden",
+    "notFound": "Resource not found",
+    "badRequest": "Invalid request",
+    "serverError": "Server error occurred",
+    "networkError": "Network error. Please check your connection.",
+    "unknownError": "An unknown error occurred",
+    "validationError": "Validation error"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign in",
+    "signingIn": "Signing in...",
+    "loginSuccess": "Login successful",
+    "loginFailed": "Login failed. Please try again.",
+    "logoutSuccess": "Logged out",
+    "unauthorized": "You are not authorized to access this resource"
+  }
+}
+

@@ -1,0 +1,114 @@
+{
+  "common": {
+    "apply": "Appliquer",
+    "reset": "Réinitialiser",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "add": "Ajouter",
+    "remove": "Retirer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "filters": "Filtres",
+    "moreFilters": "Plus de filtres",
+    "actions": "Actions",
+    "loading": "Chargement...",
+    "noResults": "Aucun résultat.",
+    "results": "résultats",
+    "of": "sur"
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "viridial": "Viridial"
+  },
+  "filter": {
+    "status": "Statut",
+    "email": "Email",
+    "amount": "Montant",
+    "allStatuses": "Tous les statuts",
+    "filterByEmail": "Filtrer par email...",
+    "filterByAmount": "Filtrer par montant...",
+    "advancedFilters": "Filtres avancés",
+    "advancedFiltersDescription": "Ajoutez des filtres supplémentaires pour affiner vos résultats de recherche",
+    "field": "Champ",
+    "value": "Valeur",
+    "addFilter": "Ajouter un filtre",
+    "selectStatus": "Sélectionner le statut"
+  },
+  "status": {
+    "pending": "En attente",
+    "processing": "En cours",
+    "success": "Réussi",
+    "failed": "Échoué"
+  },
+  "table": {
+    "rowsPerPage": "Lignes par page :",
+    "page": "Page",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "firstPage": "Aller à la première page",
+    "lastPage": "Aller à la dernière page",
+    "previousPage": "Aller à la page précédente",
+    "nextPage": "Aller à la page suivante",
+    "columns": "Colonnes",
+    "selectAll": "Tout sélectionner",
+    "selectRow": "Sélectionner la ligne"
+  },
+  "list": {
+    "activate": "Activer",
+    "activateBulk": "Activer {count} élément(s)",
+    "activateNoSelection": "Activer (aucune sélection)",
+    "deleteBulk": "Supprimer {count} élément(s)",
+    "deleteNoSelection": "Supprimer (aucune sélection)",
+    "viewPayment": "Voir le paiement",
+    "deletePayment": "Supprimer le paiement"
+  },
+  "designSystem": {
+    "title": "Système de design",
+    "subtitle": "Composants UI d'entreprise construits avec shadcn-vue",
+    "newUser": "Nouvel utilisateur"
+  },
+  "stats": {
+    "users": "Utilisateurs",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "pending": "En attente"
+  },
+  "payment": {
+    "id": "ID",
+    "amount": "Montant",
+    "status": "Statut",
+    "date": "Date",
+    "copyId": "Copier l'ID du paiement",
+    "viewCustomer": "Voir le client",
+    "viewDetails": "Voir les détails du paiement"
+  },
+  "errors": {
+    "unauthorized": "Accès non autorisé",
+    "forbidden": "Accès interdit",
+    "notFound": "Ressource introuvable",
+    "badRequest": "Requête invalide",
+    "serverError": "Erreur serveur survenue",
+    "networkError": "Erreur réseau. Veuillez vérifier votre connexion.",
+    "unknownError": "Une erreur inconnue s'est produite",
+    "validationError": "Erreur de validation"
+  },
+  "auth": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "register": "S'inscrire",
+    "email": "Email",
+    "password": "Mot de passe",
+    "rememberMe": "Se souvenir de moi",
+    "forgotPassword": "Mot de passe oublié ?",
+    "signIn": "Se connecter",
+    "signingIn": "Connexion en cours...",
+    "loginSuccess": "Connexion réussie",
+    "loginFailed": "Échec de la connexion. Veuillez réessayer.",
+    "logoutSuccess": "Déconnecté",
+    "unauthorized": "Vous n'êtes pas autorisé à accéder à cette ressource"
+  }
+}
+

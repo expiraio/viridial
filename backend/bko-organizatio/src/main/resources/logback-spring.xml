@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    
+    <!-- Properties -->
+    <springProperty scope="context" name="LOG_FILE" source="logging.file.name" defaultValue="logs/viridial-organization.log"/>
+    <springProperty scope="context" name="LOG_ERROR_FILE" source="logging.file.error.name" defaultValue="logs/viridial-organization-error.log"/>
+    <springProperty scope="context" name="LOG_FILE_MAX_SIZE" source="logging.file.max-size" defaultValue="50MB"/>
+    <springProperty scope="context" name="LOG_FILE_MAX_HISTORY" source="logging.file.max-history" defaultValue="30"/>
+    <springProperty scope="context" name="LOG_FILE_TOTAL_SIZE" source="logging.file.total-size-cap" defaultValue="1GB"/>
+    <springProperty scope="context" name="LOG_JSON_ENABLED" source="logging.json.enabled" defaultValue="false"/>
+    
+    <!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    
+    <!-- File Appender with Rolling Policy -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_FILE}</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${PID:- } --- [%t] %-40.40logger{39} : %m%n%wEx</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>${LOG_FILE_MAX_SIZE}</maxFileSize>
+            <maxHistory>${LOG_FILE_MAX_HISTORY}</maxHistory>
+            <totalSizeCap>${LOG_FILE_TOTAL_SIZE}</totalSizeCap>
+            <cleanHistoryOnStart>false</cleanHistoryOnStart>
+        </rollingPolicy>
+    </appender>
+    
+    <!-- Error File Appender (errors only) -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_ERROR_FILE}</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p ${PID:- } --- [%t] %-40.40logger{39} : %m%n%wEx</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_ERROR_FILE}.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>50MB</maxFileSize>
+            <maxHistory>90</maxHistory>
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+    
+    <!-- Async Appender for better performance -->
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+        <includeCallerData>false</includeCallerData>
+        <appender-ref ref="FILE"/>
+    </appender>
+    
+    <!-- SQL Appender (separate file for SQL queries) -->
+    <appender name="SQL_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/viridial-organization-sql.log</file>
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+            <evaluator>
+                <expression>logger.contains("org.hibernate.SQL") || logger.contains("org.hibernate.type.descriptor.sql")</expression>
+            </evaluator>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>logs/viridial-organization-sql.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxFileSize>50MB</maxFileSize>
+            <maxHistory>7</maxHistory>
+            <totalSizeCap>200MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+    
+    <!-- Root Logger -->
+    <root level="${LOG_LEVEL_ROOT:-INFO}">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </root>
+    
+    <!-- Application Logger -->
+    <logger name="com.viridial" level="${LOG_LEVEL_VIRIDIAL:-DEBUG}" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="ASYNC_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </logger>
+    
+    <!-- SQL Logger -->
+    <logger name="org.hibernate.SQL" level="${LOG_LEVEL_SQL:-DEBUG}" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="SQL_FILE"/>
+    </logger>
+    
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="${LOG_LEVEL_SQL_PARAMS:-TRACE}" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="SQL_FILE"/>
+    </logger>
+    
+    <!-- Spring Framework Loggers -->
+    <logger name="org.springframework" level="${LOG_LEVEL_SPRING:-INFO}"/>
+    <logger name="org.springframework.web" level="${LOG_LEVEL_WEB:-INFO}"/>
+    <logger name="org.springframework.transaction" level="${LOG_LEVEL_TRANSACTION:-DEBUG}"/>
+    <logger name="org.springframework.data" level="${LOG_LEVEL_DATA:-DEBUG}"/>
+    
+    <!-- Hibernate Loggers -->
+    <logger name="org.hibernate" level="${LOG_LEVEL_HIBERNATE:-INFO}"/>
+    <logger name="org.hibernate.stat" level="${LOG_LEVEL_HIBERNATE_STAT:-DEBUG}"/>
+    
+    <!-- Database Loggers -->
+    <logger name="com.zaxxer.hikari" level="${LOG_LEVEL_HIKARI:-INFO}"/>
+    <logger name="org.postgresql" level="${LOG_LEVEL_POSTGRESQL:-WARN}"/>
+    
+    <!-- Profile-specific configurations -->
+    <springProfile name="dev,local">
+        <root level="DEBUG">
+            <appender-ref ref="CONSOLE"/>
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ERROR_FILE"/>
+        </root>
+    </springProfile>
+    
+    <springProfile name="prod,production">
+        <root level="INFO">
+            <appender-ref ref="ASYNC_FILE"/>
+            <appender-ref ref="ERROR_FILE"/>
+        </root>
+        <logger name="com.viridial" level="INFO"/>
+    </springProfile>
+</configuration>
+
