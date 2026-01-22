@@ -1,0 +1,144 @@
+On appliquera Règlement général sur la protection des données en deux temps :
+
+Anonymisation des données :
+
+Anonymisation des données personnelles (cf tableau ci-dessous) à partir de 6 ans (durée paramétrable) après la dernière déclaration (de versement ou de régularisation) transmise à la DGFIP.
+
+Pendant l'étape d'anonymisation, nous allons exclure l'ensemble des bénéficiaires suivants : 
+
+Bénéficiaires créés sur les 6 derniers mois, 
+Bénéficiaires possédants un versement ou une régularisation avec l'un des statuts : "CREE", "DECALE", "BROUILLON", "KO_BENEF" ou "KO_TAUX" → Confirmer que le statut "SUPPRIME" ne doit pas être pris en compte. 
+
+
+Liste des données à anonymiser : 
+
+BENEFICIAIRE	
+NIR
+
+Oui	Vide	Numéro d'Inscription au Répertoire
+BENEFICIAIRE	NOM_FAMILLE	Oui	Xxxxx	Nom de famille ou de jeune fille
+BENEFICIAIRE	NOM_USAGE	Oui	Xxxxx	Nom d'usage
+BENEFICIAIRE	PRENOMS	Oui	Xxxxx	Prénoms
+BENEFICIAIRE	ADRESSE	Oui	Vide	Adresse postale
+BENEFICIAIRE	CODE_POSTAL	Oui	Vide	Adresse - Code postal
+BENEFICIAIRE	LOCALITE	Oui	Vide	Adresse - Commune
+BENEFICIAIRE	CODE_PAYS	Oui	Vide	Adresse - Pays
+BENEFICIAIRE	CODE_DISTRI_ETR	Oui	Vide	Adresse
+BENEFICIAIRE	COMPL_LOCALISATION	Oui	Vide	
+BENEFICIAIRE	SERV_DISTRI	Oui	Vide	
+BENEFICIAIRE	DATE_NAISSANCE	Oui	Vide	Date de naissance
+BENEFICIAIRE	LIEU_NAISSANCE	Oui	Vide	Commune de naissance
+BENEFICIAIRE	NTT	Oui	Vide	Numéro d'identification temporaire
+BENEFICIAIRE	DEPARTEMENT_NAISSANCE	Oui	Vide	Département de naissance
+BENEFICIAIRE	CODE_PAYS_NAISSANCE	Oui	Vide	Pays de naissance
+BENEFICIAIRE	CODE_SEXE	Oui	Vide	Code Sexe
+
+
+
+
+
+
+
+
+
+Purge des données : 
+
+Purge des données à partir de 7 ans (durée paramétrable) après la dernière déclaration (de versement ou de régularisation) transmise à la DGFIP ou bien la date de création dans le cas des bénéficiaires sans déclaration.
+
+Le traitement supprimera l'ensemble des données rattachées à un bénéficiaire : données personnelles et fiscales. 
+
+
+
+Liste des données à supprimer : 
+
+
+
+
+
+
+
+
+
+Rappel sur la notion d'individu et de bénéficiaire :
+
+En base de données, nous avons deux notions concernant la personne :
+
+Une notion "chapeau" ; l'individu qui est unique pour tous les back-office et les entités (Table : Individu et historique_individu)
+Le bénéficiaire qui est propre à chaque Back-office/Entité  (table beneficiaire et historique_beneficiaire)
+→ On peut avoir X bénéficiaires pour un même individu
+
+
+
+
+
+
+Lorsqu'il y a une demande du taux personnalisé à la DGFIP de la part de PASRAU, celle ci est faite au niveau de l'individu et "répercutée" sur le bénéficiaire de chaque Back-office/Entité
+
+→ Il faudra bien distinguer les notions de l'individu du bénéficiaire pour l''anonymisation des données et la purge car si on anonymise (ou purge) un individu; les back- office ne pourront plus faire d'appel de taux pour un bénéficiaire qui est rattaché à un individu dont les données ont été anonymisées.
+
+
+
+Nous souhaitons donc voir quelle est la fréquence d'anonymisation et de purge de chaque back-office. Voire de chaque entité?
+
+
+
+Back Office	Fréquence Anonymisation/Purge BO amont	Fréquence Anonymisation	Fréquence Purge	Commentaires
+ANAIS	
+
+
+
+AVT PREVOYANCE	
+
+
+
+Accapulco BDI	
+
+
+
+Accapulco ECT	
+
+
+
+DOM TOM BO (CLEVA)	
+
+
+
+GRECO	
+10 ans	10 ans	
+Gestion Centrale	
+Idem Pasrau
+
+Idem Pasrau	Saisie manuelle- suit le règles PASRAU
+Indemnités Temps Passé	
+Idem Pasrau	Idem Pasrau	Concerne les indemnités dûs aux administrateurs
+NEOGEST	
+
+
+
+SI RENTES	
+
+
+
+RIVAGE	
+
+
+
+SIGMA/OASIS	
+Purge 10 ans IARD 
+
+Purge peut y aller jusqu'à 50 ans pour la décennale 
+
+
+
+
+VIE 2000	
+
+
+
+WIGAN	
+
+
+
+NB ; que prévoir en traçage/compte-rendu des traitements d'anonymisation? De Purge?
+
+Quelle fréquence passage du batch? Mensuel? Annuel?
